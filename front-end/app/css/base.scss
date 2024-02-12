@@ -1,0 +1,71 @@
+@import "breakpoints";
+
+body,
+html {
+  height: 100%;
+  // background-color: blue;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  max-width: 55ch;
+}
+
+h1 {
+  @apply font-semibold;
+  @apply text-slate-900;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-medium;
+}
+
+h1 {
+  @apply text-3xl;
+
+  @include md {
+    @apply text-5xl;
+  }
+  @include lg {
+    @apply text-6xl;
+  }
+}
+h2 {
+  @apply text-2xl;
+
+  @include md {
+    @apply text-4xl;
+  }
+}
+h3 {
+  @apply text-2xl;
+}
+h4 {
+  @apply text-xl;
+}
+
+input {
+  @apply block w-full rounded-md border border-slate-200 py-1.5 text-gray-900 shadow-sm placeholder:text-gray-400;
+}
+
+.full-height {
+  min-height: calc(100% - 4.5rem);
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
